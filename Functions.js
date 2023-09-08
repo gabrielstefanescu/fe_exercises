@@ -158,7 +158,11 @@ function add(arg1, arg2) {
     console.log("Invalid input");
   }
 }
-let result = add(30, 40);
+let result = add(30, 40); //returns 70
+let result1 = add("Hello ", "World"); //returns Hello World
+let result2 = add("Hello ", 40); //returns Invalid input
+let result3 = add(30, "40"); //returns Invalid input with the current conditions - otherwise it returns 3040
+
 console.log(result);
 
 // Exercise 2: Write a function "operate(a, b, operation)" that takes two numbers and an "operation" function. Use the "operation" function on the two numbers and return the result.
@@ -168,5 +172,5 @@ function operate(a, b, operation) {
   }
   return add();
 }
-let result2 = add(25, 15);
-console.log(result2);
+let result4 = add(25, 15);
+console.log(result4);
