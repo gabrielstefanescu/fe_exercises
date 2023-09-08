@@ -150,17 +150,23 @@ console.log(generatePassword(10));
 
 // Exercise 1: Create a function add() that can either add two numbers or concatenate two strings based on the input type?
 function add(arg1, arg2) {
-  return arg1 + arg2;
+  if (typeof arg1 === "string" && typeof arg2 === "string") {
+    return arg1.concat(arg2);
+  } else if (typeof arg1 === "number" && typeof arg2 === "number") {
+    return arg1 + arg2;
+  } else {
+    console.log("Invalid input");
+  }
 }
 let result = add(30, 40);
 console.log(result);
 
-// Exercise 2: Write a function "operate(a, b, add)" that takes two numbers and an "add" function. Use the "add" function on the two numbers and return the result.
-function operate(a, b, add) {
+// Exercise 2: Write a function "operate(a, b, operation)" that takes two numbers and an "operation" function. Use the "operation" function on the two numbers and return the result.
+function operate(a, b, operation) {
   function add() {
     return a + b;
   }
- return add();
+  return add();
 }
 let result2 = add(25, 15);
 console.log(result2);
