@@ -2,7 +2,8 @@
 let car = "Audi";
 
 function myFunction() {
-  car = "Volvo";
+  car = "Volvo"; //vs
+  //let car = "Volvo";
 }
 myFunction();
 console.log(car);
