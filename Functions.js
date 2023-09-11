@@ -1,3 +1,13 @@
+// 3. Scoped vs Global Variables
+let car = "Audi";
+
+function myFunction() {
+  car = "Volvo"; //vs
+  //let car = "Volvo";
+}
+myFunction();
+console.log(car);
+
 // 4. Use functions to repeat actions.
 
 //Exercise 1: Function Declaration
