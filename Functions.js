@@ -167,10 +167,10 @@ console.log(result);
 
 // Exercise 2: Write a function "operate(a, b, operation)" that takes two numbers and an "operation" function. Use the "operation" function on the two numbers and return the result.
 function operate(a, b, operation) {
-  function add() {
-    return a + b;
-  }
-  return add();
+  return operation(a, b);
 }
-let result4 = add(25, 15);
+function addition(x, y) {
+  return x + y;
+}
+let result4 = operate(15, 25, addition);
 console.log(result4);
