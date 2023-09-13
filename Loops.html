@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Sum of Natural Numbers</title>
+</head>
+<body>
+    <h1>Enter Your Number:</h1>
+    <input type="number" id="numberInput">
+    <button onclick="calculateSum()">Submit</button>
+    <p id="calculateSum"></p>
+    <script>
+        function calculateSum() {
+            let number = document.getElementById("numberInput").valueAsNumber;
+            let result = 0;
+            while (number > 0) {
+            result += number;
+            number--;
+            }
+            console.log(result);
+            document.getElementById("calculateSum").textContent = `The sum is ${result}!`;
+        }
+    </script>
+</body>
+</html>
