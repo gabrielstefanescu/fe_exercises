@@ -16,7 +16,7 @@ console.log(result);
 
 function factorial(n) {
   let result = 1;
-  for (let i=0; n > i; n--) {
+  for (let i = 0; n > i; n--) {
     result *= n;
   }
   return result;
@@ -27,36 +27,41 @@ console.log(x);
 // Task 3: Find Prime Numbers
 // Write a program that finds and prints all prime numbers between a given range (e.g., 1 to 100).
 // Use a for loop for iterating through numbers and implement a prime-checking function.
-
-let count = 0;
-function primeCheck(num1, num2) {
-  let primes = [];
-  for (let j = 2; j <= num2; j++) {
-    for (let i = num1; i <= j; i++) {
-      if (j % i == 0) {
-        count++;
-      }
-    }
-    if (count == 2) {
-        primes.push(j);
-    }
-    count = 0;
+function primeCheck(num) {
+  if (num <= 1) {
+    return false;
   }
-  return primes;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
-let x2 = primeCheck(1, 100);
-console.log(x2);
+function printPrime(num1, num2) {
+    if (typeof num1 === "number" && typeof num2 === "number") {
+        for (let i = num1; i <= num2; i++) {
+            const isPrime = primeCheck(i);
+            if (isPrime) {
+            console.log(i);
+            }
+        }
+    } else {
+    console.log("invalid input");
+  }
+}
+printPrime(1, 100);
 
 // Task 4: Reverse a String
 // Implement a function that reverses a given string using a for loop.
 // For example, if the input is "hello," the function should return "olleh."
 
 function reverseString(string) {
-    let reversedString = "";
-    for (let i = string.length-1; i >= 0; i--) {
-        reversedString += string[i];
-    }
-    return reversedString;
+  let reversedString = "";
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversedString += string[i];
+  }
+  return reversedString;
 }
 let x4 = reverseString("Hello");
 console.log(x4);
@@ -70,9 +75,9 @@ console.log(x4);
 // 12345
 let num = 5;
 for (let col = 1; col <= num; col++) {
-    row = "";
+  row = "";
   for (let i = 1; i <= col; i++) {
     row += i;
-    }
-    console.log(row);
+  }
+  console.log(row);
 }
