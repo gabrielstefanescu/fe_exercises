@@ -1,0 +1,29 @@
+<!-- Task 5: Array Sorting
+Write a program that prompts the user to enter a list of numbers and then sorts and displays the numbers in ascending order 
+using the sort method. Ensure that the user can enter multiple numbers separated by spaces or commas. -->
+<html>
+<head>
+    <title>Array Sorting</title>
+</head>
+<body>
+    <h1>Enter Your Numbers:</h1>
+    <input type="text" id="numberInput">
+    <button onclick="sortNumbers()">Submit</button>
+    <p id="sortNumbers"></p>
+    <script>
+        function sortNumbers() {
+            let numberInput = document.getElementById("numberInput").value;
+            let numbers = numberInput.split(',').map(Number);
+            for (let element of numbers) {
+                if (isNaN(element)) {
+                document.getElementById("sortNumbers").textContent = "Invalid input";
+                return;
+                }
+            }
+            numbers.sort(function(a, b){return a - b});
+            console.log(numbers);
+            document.getElementById("sortNumbers").textContent = `Sorted numbers: ${numbers}.`;
+        }
+    </script>
+</body>
+</html>
