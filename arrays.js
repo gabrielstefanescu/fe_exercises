@@ -3,6 +3,11 @@
 // Test the function with different arrays.
 //Solution1
 function findTheMaxElement(array) {
+  for (let element of array) {
+    if (typeof element !== "number") {
+      return ("Invalid input");
+    }
+  }
   return Math.max(...array);
 }
 let x = findTheMaxElement([1, 5, 10, 109, 40, 35, 20]);
@@ -10,6 +15,11 @@ console.log(x);
 
 //Solution2
 function findTheMaxElement(array) {
+  for (let element of array) {
+    if (typeof element !== "number") {
+      return ("Invalid input");
+    }
+  }
   let max = array[0];
   for (let i = 0; i < array.length; i++) {
     if (array[i] > max) {
@@ -26,17 +36,27 @@ console.log(x2);
 // The original array should remain unchanged.
 //Solution1:
 function reverseArray(array) {
+  for (let element of array) {
+    if (typeof element !== "number") {
+      return ("Invalid input");
+    }
+  }
   let reverseElements = "";
   for (let i = array.length - 1; i >= 0; i--) {
     reverseElements += array[i];
   }
   return reverseElements;
 }
-let x3 = reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let x3 = reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 console.log(x3);
 
 //Solution2:
 function reverseArray(array) {
+  for (let element of array) {
+    if (typeof element !== "number") {
+      return ("Invalid input");
+    }
+  }
   let reverseElements = [];
   for (let i = array.length - 1; i >= 0; i--) {
     let element = array[i];
