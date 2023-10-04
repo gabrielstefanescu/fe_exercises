@@ -88,13 +88,11 @@ const shoppingCart = {
 };
 
 function calculatePrice() {
-  return console.log(
-    shoppingCart.item1.price +
-      shoppingCart.item2.price +
-      shoppingCart.item3.price +
-      shoppingCart.item4.price +
-      "$"
-  );
+  let totalPrice = 0;
+  for (let value in shoppingCart) {
+    totalPrice += shoppingCart[value].price;
+  }
+  console.log(totalPrice);
 }
 calculatePrice();
 
