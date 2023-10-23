@@ -1,0 +1,6 @@
+<div *ngFor="let bankAccount of bankAccounts">
+    <p>{{ bankAccount.showBalance() }}</p>
+    <p>{{ bankAccount.deposit(20) }}</p>
+    <p>{{ bankAccount.withdrawal(600) }}</p>
+</div>
+<br>
